@@ -1,0 +1,764 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ol,ul{
+    list-style: none;
+}
+.clr{
+    clear: both;
+}
+body{
+    
+}
+.main{
+    text-align: center;
+    padding-top: 100px;
+}
+.title h1{
+    font-family: OpenSans-Light;
+    font-size: 44px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.title h1 span{
+    font-family: OpenSans-SemiBold;
+}
+.title h2{
+    width: 100px;
+    height: 3px;
+    background: #fcac45;
+    display: inline-block;
+    margin-top: 30px;
+}
+.title h3{
+    width: 65px;
+    height: 3px;
+    background: #b37b33;
+    display: inline-block;
+}
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+/*============================================
+                font part start
+============================================*/
+@font-face{
+    font-family: OpenSans-Bold;
+    src: url(../fonts/OpenSans/OpenSans-Bold.ttf);
+}
+@font-face{
+    font-family: OpenSans-Regular;
+    src: url(../fonts/OpenSans/OpenSans-Regular.ttf);
+}
+@font-face{
+    font-family: OpenSans-SemiBold;
+    src: url(../fonts/OpenSans/OpenSans-SemiBold.ttf);
+}
+@font-face{
+    font-family: OpenSans-Italic;
+    src: url(../fonts/OpenSans/OpenSans-Italic.ttf);
+}
+@font-face{
+    font-family: OpenSans-Light;
+    src: url(../fonts/OpenSans/OpenSans-Light.ttf);
+}
+@font-face{
+    font-family: Lato-Bold;
+    src: url(../fonts/Lato/Lato-Bold.ttf);
+}
+@font-face{
+    font-family: Lato-Light;
+    src: url(../fonts/Lato/Lato-Light.ttf);
+}
+/*============================================
+                font part end
+============================================*/
+/*header part start*/
+.header_part{
+    width: 100%;
+    padding: 5px 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+}
+.header_part .header{
+    width: 100%;
+    margin-top: 50px;
+}
+.header_part .header .logo{
+    width: 20%;
+    float: left;
+    padding-top: 13px;
+} 
+.header_part .header .logo h1 a{
+    font-family: Lato-Bold;
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.header_part .header .menu{
+    width: 80%;
+    float: left;
+    padding: 20px 0px;
+} 
+.header_part .header .menu ul{
+    float: right;
+}
+.header_part .header .menu ul li{
+    float: left;
+}
+
+.header_part .header .menu ul li a{
+    font-family: Lato-Bold;
+    padding-right: 30px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    content: "";
+    transition: .4s;
+}
+.header_part .header .menu ul li.active a,
+.header_part .header .menu ul li a:hover{
+    color: #fcac45;
+}
+.header_part .header .menu ul li a::after{
+    position: absolute;
+    content: "";
+    bottom: -20px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #fcac45;
+    transition: .4s;
+}
+.header_part .header .menu ul li.active a::after,
+.header_part .header .menu ul li a:hover::after{
+    width: 100%;
+}
+/*header part end*/
+/*banner part start*/
+#banner_part{
+    width: 100%;
+    position: relative;
+}
+#banner_part .banner_item{
+    width: 100%;
+    position: relative;
+}
+#banner_part .banner_item .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+#banner_part .banner_item img{
+    width: 100%;
+    max-height: 800px;
+    min-height: 800px;
+} 
+.arrow-left{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    border: 2px solid #e3dede;
+    color: #e3dede;
+    transition: .4s;
+}
+.arrow-right{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 2px solid #e3dede;
+    color: #e3dede;
+}
+.arrow-left:hover{
+    background: #e3dede;
+    color: #575555;
+}
+.arrow-right:hover{
+    background: #e3dede;
+    color: #575555;
+}
+#banner_part .owl-dots{
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    
+}
+#banner_part .owl-dots .owl-dot{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    margin-left: 10px;
+}
+#banner_part .owl-dots .owl-dot.active{
+    background: #fcac45;
+}
+#banner_part .banner_item .overlay .text{
+    text-align: center;
+    margin-top: 300px;
+    margin-bottom: 350px;
+    
+}
+#banner_part .banner_item .overlay .text h1{
+    font-family: OpenSans-Light;
+    font-size: 44px;
+    color: #999999;
+    text-transform: uppercase;
+}
+#banner_part .banner_item .overlay .text h1 span{
+    font-family: OpenSans-Bold;
+    font-size: 44px;
+    color: #fcac45;
+}
+#banner_part .banner_item .overlay .text h2{
+    font-family: OpenSans-Regular;
+    font-size: 20px;
+    color: #d9d9d9;
+    margin-top: 20px;
+}
+#banner_part .banner_item .overlay .text h2 span{
+    font-family: OpenSans-Bold;
+    font-size: 20px;
+    color: #d9d9d9;
+}
+/*banner part end*/
+/*about part start*/
+#about_part{
+    
+}
+#about_part .about{
+    width: 100%;
+    display: flex;
+    margin-top: 100px;
+}
+#about_part .about .left{
+    width: 50%;
+    text-align: center;
+}
+#about_part .about .right{
+    width: 50%;
+}
+#about_part .about .right h3{
+    font-family: OpenSans-Regular;
+    font-size: 20px;
+    color: #636363;
+    text-transform: uppercase;
+}
+#about_part .about .right h1{
+    font-family: OpenSans-Regular;
+    font-size: 34px;
+    color: #222222;
+    text-transform: uppercase;
+    margin: 20px 0px;
+}
+#about_part .about .right h1 span{
+    font-family: OpenSans-Bold;
+}
+#about_part .about .right h2{
+    width: 100px;
+    height: 3px;
+    background: #fcac45;
+}
+#about_part .about .right p{
+    font-family: OpenSans-Regular;
+    font-size: 18px;
+    color: #6c6c6c;
+    width: 450px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+#about_part .about .right h4 i{
+    margin-right: 10px;
+}
+#about_part .about .right h4{
+    font-family: OpenSans-SemiBold;
+    font-size: 18px;
+    color: #5a5a5a;
+    margin-bottom: 20px;
+}
+#about_part .about .right h4 span{
+    font-weight: 400;
+    font-size: 16px;
+}
+/*about part end*/
+/*team part start*/
+#team_part{
+    width: 100%;
+    background: #000;
+}
+#team_part .team{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+    padding-bottom: 70px;
+}
+#team_part .team .team_membar{
+    width: 22%;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 100px;
+}
+#team_part .team .team_membar img{
+    margin-left: 60px;
+}
+#team_part .team .team_membar h1{
+    font-family: OpenSans-Bold;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+#team_part .team .team_membar h2{
+    font-family: OpenSans-Regular;
+    font-size: 16px;
+}
+#team_part .team .team_membar p{
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    width: 250px;
+    line-height: 24px;
+    margin-top: 40px;
+    margin: 0 auto;
+}
+#team_part .slick-arrow{
+    display: none !important;
+}
+/*team part end*/
+/*service part start*/
+#service_part{
+    
+}
+#service_part .main .title h1{
+    color: #000;
+}
+#service_part h6{
+    font-family: OpenSans-Italic;
+    font-size: 16px;
+    color: #6c6c6c;
+    width: 1150px;
+    text-align: center;
+    margin-top: 40px;
+}
+#service_part .service{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 0px;
+}
+#service_part .service .ser-item{
+    width: 25%;
+    text-align: center;
+}
+#service_part .service .ser-item .circle{
+    width: 120px;
+    height: 120px;
+    line-height: 155px;
+    border-radius: 50%;
+    border: 3px solid #fcac45;
+    display: inline-block;
+    text-align: center;
+}
+#service_part .service .ser-item h2{
+    font-family: OpenSans-SemiBold;
+    color: #222222;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+#service_part .service .ser-item p{
+    font-family: OpenSans-Regular;
+    color: #222222;
+    font-size: 14px;
+    margin-top: 20px;
+    width: 245px;
+    margin: 0 auto;
+}
+/*service part end*/
+/*clients part start*/
+#client_part{
+    position: relative;
+}
+#client_part .client{
+    width: 100%;
+    background: url(../images/client-bg-img.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#client_part .overlay{
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+#client_part .overlay .clients{
+    margin-top: 100px;
+    padding-bottom: 200px;
+}
+#client_part .overlay .clients img{
+    margin-left: 60px;
+    float: left;
+}
+
+.slick-dots{
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+}
+.slick-dots li{
+    float: left;
+    margin-left: 10px;
+    
+}
+.slick-dots li button{
+    font-size: 0;
+    width: 8px;
+    height: 8px;
+    background: #f5f5f5;
+    border: none;
+}
+.slick-dots .slick-active button{
+    background: #fcac45;
+}
+/*clients part end*/
+/*work part start*/
+#work_part .main .title h1{
+    color: #000;
+}
+#work_part .container .top-text p{
+    font-family: OpenSans-Italic;
+    font-size: 16px;
+    color: #6c6c6c;
+    width: 1150px;
+    text-align: center;
+    margin-top: 40px;
+}
+#work_part .menus{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: 100%;
+    float: left;
+}
+#work_part .menus .type{
+    width: 40%;
+    float: left;
+    font-family: OpenSans-SemiBold;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #222222;
+}
+#work_part .menus .menu{
+    width: 60%;
+    float: left;
+}
+#work_part .menus .menu ul{
+    float: right;
+}
+#work_part .menus .menu ul li{
+    float: left;
+    margin-left: 15px;
+    font-family: OpenSans-Regular;
+    font-size: 18px;
+    color: #6c6c6c;
+}
+#work_part .menus .menu ul li a{
+    font-family: OpenSans-Regular;
+    font-size: 18px;
+    color: #6c6c6c;
+}
+#work_part .menus .menu ul li a.all{
+    font-family: OpenSans-SemiBold;
+    color: #353535;
+}
+#work_part .menus .menu ul li a:hover{
+    color: #353535;
+}
+#work_part .menus .menu ul li a span{
+    margin-left: 15px;
+}
+#work_part .images .one{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#work_part .images .one .img{
+    width: 23.5%;
+    position: relative;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+#work_part .images .one .img img{
+    width: 100%;
+    display: block;
+}
+#work_part .images .one .img .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: rgba(0, 0, 0, 0.8);
+    transition: .4s;
+    opacity: 0;
+}
+#work_part .images .one .img .overlay h1{
+    font-family: OpenSans-SemiBold;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    margin-top: 70px;
+    text-transform: uppercase;
+}
+#work_part .images .one .img .overlay p{
+    font-family: OpenSans-SemiBold;
+    font-size: 14px;
+    color: #b2b2b2;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#work_part .images .one .img .overlay i{
+    font-size: 20px;
+    text-align: center;
+    color: #fcac45;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    border: 1px solid #fcac45;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+#work_part .images .one .img:hover .overlay{
+    height: 100%;
+    opacity: 1;
+}
+/*work part end*/
+/*testi part start*/
+#testi_part{
+    margin-top: 80px;
+}
+#testi_part .slider_item{
+    width: 100%;
+    background: url(../images/testi_bg-img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#testi_part .overlay{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+#testi_part .overlay .text{
+    text-align: center;
+    margin-top: 100px;
+}
+#testi_part .overlay .text p{
+    text-transform: uppercase;
+    font-family: OpenSans-SemiBold;
+    font-size: 18px;
+    color: #e7e7e7;
+}
+#testi_part .overlay .text h3{
+    font-family: OpenSans-Regular;
+    font-weight: 400;
+    font-size: 18px;
+    color: #e7e7e7;
+    margin-top: 50px;
+    padding-bottom: 150px;
+}
+#testi_part .overlay .text h3 span{
+    font-family: OpenSans-SemiBold;
+    font-weight: bold;
+}
+/*testi part end*/
+/*contact part start*/
+#contact_part .main .title h1{
+    color: #000;
+}
+
+#contact_part .text{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    
+}
+#contact_part .text p{
+    width: 750px;
+    font-family: OpenSans-Italic;
+    margin: 0 auto;
+    color: #6c6c6c;
+    font-size: 16px;
+}
+#contact_part .forms{
+    width: 760px;
+    margin: 0 auto;
+}
+#contact_part .forms .row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#contact_part .forms .one{
+    float: left;
+    width: 48%;
+}
+#contact_part .forms .one label{
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    color: #636363;
+    display: block;
+    padding: 5px 0px;
+}
+#contact_part .forms .one label span{
+    color: #db0000;
+}
+#contact_part .forms .one input{
+    width: 100%;
+    height: 40px;
+    padding: 0px 5px;
+    border: 1px solid #636363;
+}
+#contact_part .forms .two{
+    float: left;
+    width: 48%;
+}
+#contact_part .forms .two label{
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    color: #636363;
+    display: block;
+    padding: 5px 0px;
+}
+#contact_part .forms .two label span{
+    color: #db0000;
+}
+#contact_part .forms .two input{
+    width: 100%;
+    height: 40px;
+    padding: 0px 5px;
+    border: 1px solid #636363;
+}
+
+#contact_part .forms .message{
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+}
+#contact_part .forms .message label{
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    color: #636363;
+    display: block;
+    padding: 5px 0px;
+}
+#contact_part .forms .message label span{
+    color: #db0000;
+}
+#contact_part .forms .message textarea{
+    width: 100%;
+    padding: 5px 5px;
+    resize: none;
+    border: 1px solid #636363;
+}
+#contact_part .forms .send{
+    float: right;
+    margin-top: 30px;
+}
+#contact_part .forms .send a{
+    display: inline-block;
+    font-family: OpenSans-SemiBold;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    background: #fcac45;
+    padding: 15px 65px 8px 65px;
+    text-transform: uppercase;
+    border-bottom: 7px solid #d0d0d0;
+    margin-right: -10px;
+}
+/*contact part end*/
+/*footer part start*/
+#footer_part{
+    width: 100%;
+    background: #171717;
+    padding: 30px 0px;
+    margin-top: 100px;
+}
+#footer_part .copyright{
+    width: 50%;
+    float: left;
+}
+#footer_part .copyright p{
+    font-family: OpenSans-Regular;
+    font-size: 12px;
+    color: #b2b2b2;
+}
+#footer_part .copyright p span{
+    font-weight: bold;
+    color: #c9c9c9;
+    cursor: pointer;
+}
+#footer_part .icon{
+    width: 50%;
+    float: left;
+}
+#footer_part .icon a{
+    float: right;
+}
+#footer_part .icon a i{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    line-height: 25px;
+    border: 2px solid #c9c9c9;
+    text-align: center;
+    color: #c9c9c9;
+    margin-left: 15px;
+}
+/*footer part end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
